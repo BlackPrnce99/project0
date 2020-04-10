@@ -1,0 +1,382 @@
+//Setting up Variables
+
+$breakpoint-phone: 414px;
+$breakpoint-tablet: 1024px;
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+
+    color: black;
+    background: darkgrey;
+
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Building general structure of sections. */
+
+.section-wrapper {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Building general structure of hero section */
+
+#hero-section {
+    display: flex;
+    flex-direction: row;
+
+    #front-page-hero-logo {
+        width: 130px;
+
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        z-index: 100;
+    }
+
+    .hero-split-image {
+        width: 25vw;
+        height: 100vh;
+        position: relative;
+
+        display: flex;
+    }
+
+    #image-one {
+        background-position: center;
+
+        background-image: url(/Images/Buff-n-Bird-copy.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #image-two {
+        background-position: center;
+
+        background-image: url(/Images/DSC_11281.JPG);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #image-three {
+        background-position: center;
+
+        background-image: url(/Images/DSC_3246.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #image-four {
+        background-position-y: 45%;
+        background-position-x: 35%;
+
+        background-image: url(/Images/You-Found-Me.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .hero-split-text {
+        width: 100%;
+
+        overflow: hidden;
+
+        position: absolute;
+        bottom: 20px;
+
+        color: rgba(244,244,244,0.8);
+
+        text-align: center;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 7rem;
+    }
+}
+
+@media (max-device-width: $breakpoint-tablet) {
+    #hero-section {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+
+        .hero-split-image {
+            width: 50vw;
+            height: 50vh;
+        }
+
+        #image-three {
+            .hero-split-text {
+                bottom: auto;
+                top: 20px;
+            }
+        }
+
+        #image-four {
+            .hero-split-text {
+                bottom: auto;
+                top: 20px;
+            }
+        }
+
+    }
+
+}
+
+@media (max-device-width: $breakpoint-tablet) {
+//Any changes that cascade down from the phone. 
+}
+
+
+
+/* Building general structure of the main body section*/
+
+
+#main-body-content {
+    background-color: white;
+    padding-top: 67px;
+    color: rgb(90, 90, 90);
+
+    height: 95vh;
+
+    .main-section-content-wrapper {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+
+    #section-one-upper-wrapper {
+        margin-bottom: 67px;
+        width: 100%;
+    
+        #main-page-section-one-title {
+            width: 100%;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+    }
+
+    #section-one-lower-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .text-card {
+            max-height: 100%;
+            max-width: calc(33% - 20px);
+            margin: 10px;
+            overflow: hidden;
+        
+            border-radius: 10px;
+
+            box-shadow: 1px 1px 7px 3px rgba(0,0,0,0.1);
+        }
+
+        .text-card-image {
+            width: 100%;
+        }
+
+        .card-content-wrapper {
+
+            padding-right: 25px;
+            padding-left: 25px;
+            padding-bottom: 30px;
+            padding-top: 15px;
+
+            .text-card-title {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+
+        }
+
+        #card-one {
+            height: calc(100% - 15px);
+        }
+
+        #card-two {
+            position: relative;
+            top: -10px;
+        }
+
+        #card-three {
+            height: calc(100% - 15px);
+        }
+
+    }
+
+    #tablet-main-body-image {
+        display: none;
+    }
+}
+
+@media (max-device-width: $breakpoint-tablet) {
+    //Changes that cascade through tablet portrait view
+    #main-body-content {
+
+        .main-section-content-wrapper{
+
+            #section-one-upper-wrapper {
+                width: 90vw;
+                margin-right: auto;
+                margin-left: auto;
+
+                #main-page-section-one-content {
+                    text-indent: 2em;
+                }
+            }
+
+
+            #section-one-lower-wrapper {
+                width: 90vw;
+                margin-right: auto;
+                margin-left: auto;
+                margin-bottom: 50px;
+
+                .text-card {
+                    max-width: none;
+                    width: 33%;
+                    
+                }
+            }
+        }
+
+        #tablet-main-body-image {
+            display: block;
+
+            width: 75vw;
+            height: 250px;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            background-image: url(/Images/table-mountain.png);
+            background-size: cover;
+            background-position: center;
+
+            border-radius: 15px;
+
+            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+@media (max-device-width: $breakpoint-phone) {
+    //Cascading this sections styles down to the phone!
+    #main-body-content {
+        height: auto;
+
+        .main-section-content-wrapper {
+            margin-left: 8%;
+            margin-right: 8%;
+        
+
+            #section-one-upper-wrapper {
+
+            #main-page-section-one-title {
+                    font-size: 5rem;
+                    margin-bottom: 75px;
+                }
+
+                #main-page-section-one-content {
+                    font-size: 2.4rem;
+                    margin-bottom: 100px;
+                }
+            }
+
+            #section-one-lower-wrapper {
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .text-card {
+                    max-width: none;
+                    width: 90%;
+                    margin-bottom: 75px;
+
+                    border-radius: 40px;
+                }
+
+                .card-content-wrapper {
+                    padding-top: 40px;
+                    padding-bottom: 75px;
+                    padding-left: 50px;
+                    padding-right: 50px;
+
+                    .text-card-title {
+                        font-size: 3.5rem;
+                        margin-bottom: 25px;
+                    }
+                    .text-card-content {
+                        font-size: 2.3rem;
+                    }
+  
+                }
+
+                #card-one {
+                    height: 100%;
+                }
+                #card-two {
+                    position: static;
+                }
+
+            }
+
+            #tablet-main-body-image {
+                display: none;
+            }
+        }
+    }
+}
+
+.grid {
+    height: calc(100vh - 130px);
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+
+    .grid-image {
+        padding: 15px;
+
+        background-image: url(/Images/blue-and-orange-bird.png);
+        background-size: cover;
+        background-position: center;
+
+        color: rgba(0,0,0,0.4);
+    }
+
+
+}
+
+footer {
+    height: 130px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+
+
+    .footer-logo {
+        width: 120px;
+        align-self: center;
+
+        position: relative;
+        top: -30px;
+
+    }
+
+    .copyright-content {
+        align-self: center;
+        text-align: center;
+
+        position: relative;
+        top: -10px;
+    }
+}

@@ -1,0 +1,220 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  color: black;
+  background: darkgrey;
+  font-size: 17px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+
+/* Building general structure of sections. */
+.section-wrapper {
+  height: 100vh;
+  overflow: hidden; }
+
+/* Building general structure of hero section */
+#hero-section {
+  display: flex;
+  flex-direction: row; }
+  #hero-section #front-page-hero-logo {
+    width: 130px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 100; }
+  #hero-section .hero-split-image {
+    width: 25vw;
+    height: 100vh;
+    position: relative;
+    display: flex; }
+  #hero-section #image-one {
+    background-position: center;
+    background-image: url(/Images/Buff-n-Bird-copy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; }
+  #hero-section #image-two {
+    background-position: center;
+    background-image: url(/Images/DSC_11281.JPG);
+    background-size: cover;
+    background-repeat: no-repeat; }
+  #hero-section #image-three {
+    background-position: center;
+    background-image: url(/Images/DSC_3246.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; }
+  #hero-section #image-four {
+    background-position-y: 45%;
+    background-position-x: 35%;
+    background-image: url(/Images/You-Found-Me.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; }
+  #hero-section .hero-split-text {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 20px;
+    color: rgba(244, 244, 244, 0.8);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 7rem; }
+
+@media (max-device-width: 1024px) {
+  #hero-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%; }
+    #hero-section .hero-split-image {
+      width: 50vw;
+      height: 50vh; }
+    #hero-section #image-three .hero-split-text {
+      bottom: auto;
+      top: 20px; }
+    #hero-section #image-four .hero-split-text {
+      bottom: auto;
+      top: 20px; } }
+
+/* Building general structure of the main body section*/
+#main-body-content {
+  background-color: white;
+  padding-top: 67px;
+  color: #5a5a5a;
+  height: 95vh; }
+  #main-body-content .main-section-content-wrapper {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; }
+  #main-body-content #section-one-upper-wrapper {
+    margin-bottom: 67px;
+    width: 100%; }
+    #main-body-content #section-one-upper-wrapper #main-page-section-one-title {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 2.5rem; }
+  #main-body-content #section-one-lower-wrapper {
+    display: flex;
+    justify-content: space-between; }
+    #main-body-content #section-one-lower-wrapper .text-card {
+      max-height: 100%;
+      max-width: calc(33% - 20px);
+      margin: 10px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.1); }
+    #main-body-content #section-one-lower-wrapper .text-card-image {
+      width: 100%; }
+    #main-body-content #section-one-lower-wrapper .card-content-wrapper {
+      padding-right: 25px;
+      padding-left: 25px;
+      padding-bottom: 30px;
+      padding-top: 15px; }
+      #main-body-content #section-one-lower-wrapper .card-content-wrapper .text-card-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px; }
+    #main-body-content #section-one-lower-wrapper #card-one {
+      height: calc(100% - 15px); }
+    #main-body-content #section-one-lower-wrapper #card-two {
+      position: relative;
+      top: -10px; }
+    #main-body-content #section-one-lower-wrapper #card-three {
+      height: calc(100% - 15px); }
+  #main-body-content #tablet-main-body-image {
+    display: none; }
+
+@media (max-device-width: 1024px) {
+  #main-body-content .main-section-content-wrapper #section-one-upper-wrapper {
+    width: 90vw;
+    margin-right: auto;
+    margin-left: auto; }
+    #main-body-content .main-section-content-wrapper #section-one-upper-wrapper #main-page-section-one-content {
+      text-indent: 2em; }
+  #main-body-content .main-section-content-wrapper #section-one-lower-wrapper {
+    width: 90vw;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px; }
+    #main-body-content .main-section-content-wrapper #section-one-lower-wrapper .text-card {
+      max-width: none;
+      width: 33%; }
+  #main-body-content #tablet-main-body-image {
+    display: block;
+    width: 75vw;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(/Images/table-mountain.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1); } }
+
+@media (max-device-width: 414px) {
+  #main-body-content {
+    height: auto; }
+    #main-body-content .main-section-content-wrapper {
+      margin-left: 8%;
+      margin-right: 8%; }
+      #main-body-content .main-section-content-wrapper #section-one-upper-wrapper #main-page-section-one-title {
+        font-size: 5rem;
+        margin-bottom: 75px; }
+      #main-body-content .main-section-content-wrapper #section-one-upper-wrapper #main-page-section-one-content {
+        font-size: 2.4rem;
+        margin-bottom: 100px; }
+      #main-body-content .main-section-content-wrapper #section-one-lower-wrapper {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        #main-body-content .main-section-content-wrapper #section-one-lower-wrapper .text-card {
+          max-width: none;
+          width: 90%;
+          margin-bottom: 75px;
+          border-radius: 40px; }
+        #main-body-content .main-section-content-wrapper #section-one-lower-wrapper .card-content-wrapper {
+          padding-top: 40px;
+          padding-bottom: 75px;
+          padding-left: 50px;
+          padding-right: 50px; }
+          #main-body-content .main-section-content-wrapper #section-one-lower-wrapper .card-content-wrapper .text-card-title {
+            font-size: 3.5rem;
+            margin-bottom: 25px; }
+          #main-body-content .main-section-content-wrapper #section-one-lower-wrapper .card-content-wrapper .text-card-content {
+            font-size: 2.3rem; }
+        #main-body-content .main-section-content-wrapper #section-one-lower-wrapper #card-one {
+          height: 100%; }
+        #main-body-content .main-section-content-wrapper #section-one-lower-wrapper #card-two {
+          position: static; }
+      #main-body-content .main-section-content-wrapper #tablet-main-body-image {
+        display: none; } }
+
+.grid {
+  height: calc(100vh - 130px);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto; }
+  .grid .grid-image {
+    padding: 15px;
+    background-image: url(/Images/blue-and-orange-bird.png);
+    background-size: cover;
+    background-position: center;
+    color: rgba(0, 0, 0, 0.4); }
+
+footer {
+  height: 130px;
+  background-color: white;
+  display: flex;
+  flex-direction: column; }
+  footer .footer-logo {
+    width: 120px;
+    align-self: center;
+    position: relative;
+    top: -30px; }
+  footer .copyright-content {
+    align-self: center;
+    text-align: center;
+    position: relative;
+    top: -10px; }

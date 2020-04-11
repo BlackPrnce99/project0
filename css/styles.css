@@ -80,33 +80,48 @@ body {
 /* Building general structure of the main body section*/
 #main-body-content {
   background-color: white;
-  padding-top: 67px;
+  padding-top: 5vh;
   color: #5a5a5a;
   height: 95vh; }
   #main-body-content .main-section-content-wrapper {
+    display: flex;
+    flex-direction: column;
     max-width: 1440px;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
     overflow: hidden; }
   #main-body-content #section-one-upper-wrapper {
-    margin-bottom: 67px;
+    margin-bottom: 5vh;
     width: 100%; }
     #main-body-content #section-one-upper-wrapper #main-page-section-one-title {
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 5vh;
       font-size: 2.5rem; }
   #main-body-content #section-one-lower-wrapper {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    max-width: 80vw;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh; }
     #main-body-content #section-one-lower-wrapper .text-card {
-      max-height: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       max-width: calc(33% - 20px);
       margin: 10px;
       overflow: hidden;
       border-radius: 10px;
       box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.1); }
     #main-body-content #section-one-lower-wrapper .text-card-image {
-      width: 100%; }
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center; }
     #main-body-content #section-one-lower-wrapper .card-content-wrapper {
       padding-right: 25px;
       padding-left: 25px;
@@ -115,13 +130,21 @@ body {
       #main-body-content #section-one-lower-wrapper .card-content-wrapper .text-card-title {
         font-size: 1.5rem;
         margin-bottom: 15px; }
+      #main-body-content #section-one-lower-wrapper .card-content-wrapper .text-card-content {
+        font-size: calc(10px + .25vw); }
     #main-body-content #section-one-lower-wrapper #card-one {
-      height: calc(100% - 15px); }
+      max-height: calc(100% - 20px); }
+      #main-body-content #section-one-lower-wrapper #card-one #card-one-image {
+        background-image: url(/Images/Elephant-head-on.png); }
     #main-body-content #section-one-lower-wrapper #card-two {
       position: relative;
       top: -10px; }
+      #main-body-content #section-one-lower-wrapper #card-two #card-two-image {
+        background-image: url(/Images/blue-and-orange-bird.png); }
     #main-body-content #section-one-lower-wrapper #card-three {
-      height: calc(100% - 15px); }
+      max-height: calc(100% - 20px); }
+      #main-body-content #section-one-lower-wrapper #card-three #card-three-image {
+        background-image: url(/Images/Leopard.png); }
   #main-body-content #tablet-main-body-image {
     display: none; }
 

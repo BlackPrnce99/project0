@@ -2,6 +2,10 @@
 
 $breakpoint-phone: 414px;
 $breakpoint-tablet: 1024px;
+$hyperlink-font-color: #82919a;
+$main-font-color: #505050;
+
+$card-box-shadow: 1px 1px 7px 3px rgba(0,0,0,0.1);
 
 * {
     margin: 0px;
@@ -9,6 +13,7 @@ $breakpoint-tablet: 1024px;
 }
 
 html {
+    color: $main-font-color;
     font-size: 17px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -150,28 +155,24 @@ body {
 //Footer
 
 footer {
-    height: 130px;
+    height: auto;
     background-color: white;
 
     display: flex;
     flex-direction: column;
+    padding-bottom: 30px;
 
 
     .footer-logo {
         width: 120px;
         align-self: center;
 
-        position: relative;
-        top: -30px;
-
     }
 
     .copyright-content {
+        margin-top: 15px;
         align-self: center;
         text-align: center;
-
-        position: relative;
-        top: -10px;
     }
 }
 
@@ -185,6 +186,7 @@ footer {
 }
 .section-intro-text {
     margin-bottom: 5vh;
+    padding-left: 0.5vw;
 }
 
 @media (max-device-width: $breakpoint-tablet) {
@@ -235,7 +237,7 @@ footer {
 
     border-radius: 10px;
 
-    box-shadow: 1px 1px 7px 3px rgba(0,0,0,0.1);
+    box-shadow: $card-box-shadow;
 
     .text-card-image {
 
@@ -327,20 +329,21 @@ footer {
 @media (max-device-width: $breakpoint-tablet) {
     .text-card.m-single-text-card {
         max-width: 50%;
-
-        .text-card-content-wrapper {
-
-        }
     }
 }
     
 @media (max-device-width: $breakpoint-phone) {
     .text-card.m-single-text-card {
         max-width: 100%;
+
+        margin-bottom: 0px;
         flex: 1;
 
         .text-card-image {
             height: 55vh;
+        }
+        .text-card-content-wrapper {
+            order: -1;
         }
     }
 }
@@ -349,9 +352,18 @@ footer {
 //Two Third Width Text Sections
 
 .m-section-left-two-thirds-col-content-wrapper {
+    display: flex;
+    flex-direction: column;
     padding-right: 20px;
 
     order: -1;
+
+    .left-two-thirds-col-section-lower-content-wrapper {
+        display: flex;
+        flex-direction: column;
+    
+        flex: 1;
+    }
 }
 
 @media (max-device-width: $breakpoint-tablet) {
@@ -363,10 +375,113 @@ footer {
 @media (max-device-width: $breakpoint-phone) {
     .m-section-left-two-thirds-col-content-wrapper {
         max-width: 100%;
+
+        margin-bottom: 55px;
+        padding-right: 0px;
     
     }
 }
 
+//Horizontal Tab Cards
+
+.m-tab-card {
+    position: relative;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 30%;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    margin-bottom: 40px;
+
+    text-decoration: none;
+    color: $main-font-color;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    background-color: white;
+
+    box-shadow: $card-box-shadow;
+
+    .tab-card-image {
+        background-image: url(/Images/Leopard.png);
+        background-size: cover;
+        background-position: center;
+
+        width: 30%;
+        height: 100%;
+    }
+
+    .tab-card-content-wrapper {
+        padding-top: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 15px;
+
+        .tab-card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .tab-card-text {
+            font-size: 1rem;
+        }
+
+        .tab-card-click-text {
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
+
+            color: $hyperlink-font-color;
+        }
+    }
+}
+
+@media (max-device-width: $breakpoint-tablet) {
+    .m-tab-card {
+        flex-direction: column;
+
+        margin-bottom: 30px;
+        margin-left: 2vw;
+
+        .tab-card-image {
+            width: 100%;
+        }
+
+        .tab-card-content-wrapper {
+            position: relative;
+
+            .tab-card-title {
+                font-size: 1.25rem;
+                margin-bottom: 12px;
+            }
+
+            .tab-card-text {
+                font-size: .8rem;
+            }
+
+            .tab-card-click-text {
+                bottom: auto;
+                top: 18px;
+            }
+        }
+    }
+}
+
+@media (max-device-width: $breakpoint-phone) {
+    .m-tab-card {
+        margin-left: 0px;
+        margin-right: 0px;
+
+        height: auto;
+
+        .tab-card-image {
+            height: 100px;
+        }
+    }
+}
 
 //------------------ HOME PAGE CUSTOM ----------------
 //------------------ HERO SECTION --------------------
@@ -631,8 +746,26 @@ footer {
 
         color: rgba(0,0,0,0.4);
     }
+}
 
+#home-page-footer {
 
+    padding-bottom: 5px;
+
+    .footer-logo {
+        position: relative;
+        top: -30px;
+
+    }
+
+    .copyright-content {
+        position: relative;
+        top: -25px;
+
+        text-decoration: none;
+        color: $main-font-color;
+        
+    }
 }
 
 //------------------ SAFARI CUSTOM ---------------------
@@ -649,6 +782,12 @@ footer {
 
         #safaris-text-card-image {
             background-image: url(/Images/Elephants-in-the-mud.jpg);
+        }
+
+        .m-section-left-two-thirds-col-content-wrapper {
+            #safaris-tab-card-three {
+                margin-bottom: 0px;
+            }
         }
     }
 }

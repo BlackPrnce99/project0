@@ -4,6 +4,7 @@ $breakpoint-phone: 414px;
 $breakpoint-tablet: 1024px;
 $hyperlink-font-color: #82919a;
 $main-font-color: #505050;
+$main-font-override: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 $card-box-shadow: 1px 1px 7px 3px rgba(0,0,0,0.1);
 
@@ -109,7 +110,7 @@ body {
     
     position: relative;
 
-    max-width: 80vw;
+    max-width: 90vw;
     height: 100%;
 
     margin-left: auto;
@@ -117,7 +118,7 @@ body {
 
     padding-left: 3.7%;
     padding-right: 3.7%;
-    padding-top: 40px;
+    padding-top: 50px;
     padding-bottom: 40px;
 
     overflow: auto;
@@ -129,7 +130,7 @@ body {
 @media (max-device-width: $breakpoint-phone) {
     .section-content-wrapper-rows {
         width: 85vw;
-        padding-top: 30px;
+        padding-top: 45px;
     }
     
 }
@@ -177,6 +178,88 @@ footer {
 
 //---------------------MODULES----------------------
 
+//Nav Menu
+.desktop-menu-wrapper {
+    display: flex;
+
+    position: absolute;
+    top: 58px;
+    left: 210px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    border-radius: 15px;;
+
+    background-color: white;
+    box-shadow: $card-box-shadow;
+
+    .mobile-menu-icon-wrapper {
+        display: none;
+    }
+
+
+    .menu-item {
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+
+        font-size: 1.2rem;
+        color: $main-font-color;
+        text-decoration: none;
+        font-family: $main-font-override;
+
+        border-right: 1px solid lightgrey;
+    }
+
+    #last-menu-item {
+        border-right: 0px;
+    }
+}
+
+@media (max-device-width: $breakpoint-phone) {
+    .desktop-menu-wrapper {
+
+        top: 30px;
+        left: auto;
+        right: 30px;
+
+        display: flex;
+        flex-direction: column;
+
+        .mobile-menu-icon-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            margin-top: 13px;
+            margin-bottom: 13px;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            .mobile-menu-icon-line {
+                height: 2px;
+                width: 35px;
+
+                background-color: lightgrey;
+                margin-bottom: 10px;
+
+                border-radius: 2px;
+            }
+
+            #mobile-menu-icon-last-line {
+                margin-bottom: 0px;
+            }
+        }
+
+        .menu-item {
+            display: none;
+            border-right: 0px;
+            text-align: right;
+        }
+    }
+}
+
 //General Section Headers
 
 .section-intro-title {
@@ -223,6 +306,21 @@ footer {
     
 
 }
+
+//General Row Section Lower Wrapper
+.m-row-section-lower-wrapper {
+    display: flex;
+
+    height: 100%;
+
+    justify-content: space-between;
+
+    max-width: 80vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 //Tripple Text Cards
 
@@ -308,13 +406,8 @@ footer {
             .text-card-content {
                 font-size: 1rem;
             }
-    
         }
-
     }
-
-    
-
 }
 
 //Single Column Text Cards
@@ -611,10 +704,38 @@ footer {
     }
 }
 
+.safari-itinerary-table {
+    
+    width: 100%;
+    max-width: 1080px;
+    height: auto;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: left;
+
+    border-collapse: collapse;
+
+    th {
+        border-bottom: 1px solid lightgrey;
+        padding: 10px;
+    }
+
+    td {
+        padding-top: 15px; 
+        padding-left: 10px;
+    }
+
+    .day-column {
+        width: 25%;
+
+    }
+}
 
 
 //------------------ HOME PAGE CUSTOM ----------------
-//------------------ HERO SECTION --------------------
+// Hero Section
 
 #home-hero-section {
     display: flex;
@@ -730,23 +851,11 @@ footer {
 }
 
 
-
-//----------- MAIN BODY CONTENT ------------
-
+// Main Body Content
 
 #home-main-section-wrapper {
 
-    #section-one-lower-wrapper {
-        display: flex;
-
-        height: 100%;
-
-        justify-content: space-between;
-
-        max-width: 80vw;
-
-        margin-left: auto;
-        margin-right: auto;
+    .m-row-section-lower-wrapper {
 
         #text-card-one {
             max-height: calc(100% - 20px);
@@ -816,6 +925,7 @@ footer {
             box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
 
             flex: 1;
+
         }
     } 
 }
@@ -823,7 +933,7 @@ footer {
 
 @media (max-device-width: $breakpoint-phone) {
     //Cascading this sections styles down to the phone!
-    #main-body-content {
+    #home-main-section-wrapper {
 
         .section-content-wrapper-rows {
 
@@ -917,6 +1027,52 @@ footer {
         .m-section-left-two-thirds-col-content-wrapper {
             #safaris-tab-card-three {
                 margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+#safaris-second-section-wrapper {
+    height: auto;
+
+    .section-content-wrapper-rows{
+        padding-top: 5px;
+
+        .m-section-intro-content-wrapper {
+            text-align: center;
+            max-width: 1080px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .m-row-section-lower-wrapper {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-device-width: $breakpoint-tablet) {
+    #safaris-second-section-wrapper {
+
+        .section-content-wrapper-rows {
+
+            .m-section-intro-content-wrapper {
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media (max-device-width: $breakpoint-phone) {
+    #safaris-second-section-wrapper {
+
+        .section-content-wrapper-rows {
+            
+            .m-section-intro-content-wrapper {
+                .section-intro-text {
+                    margin-bottom: 35px;
+                }
             }
         }
     }

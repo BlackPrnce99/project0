@@ -969,7 +969,7 @@ footer {
     }
 }
 
-//-------------- GALLERY GRID ----------------
+// Gallery Grid
 
 .grid {
     height: calc(100vh - 130px);
@@ -1164,3 +1164,82 @@ footer {
     }
 }
 
+// ---------------------- GALLERY MAIN ------------------------
+#gallery-hero-section {
+
+    .hero-section-image {
+        background-image: url(/Images/Lion-Looking-Up-Tree.jpeg);
+    }
+
+}
+
+#gallery-main-section-wrapper {
+
+    height: auto;
+
+    .section-intro-text {
+        margin-bottom: 3.0vh;
+    }
+
+    .gallery-student-thanks-wrapper {
+        display: flex;
+        width: 100%;
+
+        margin-bottom: 4vh;
+    
+        .gallery-student-thanks-list {
+            width: 10vw;
+            padding-left: 30px;
+        }
+    }
+    
+    .grid {
+        column-gap: 10px;
+        row-gap: 10px;
+    
+        .grid-image {
+            border-radius: 15px;
+        }
+    }  
+}
+
+@media (max-device-width: $breakpoint-tablet) {
+    #gallery-main-section-wrapper {
+
+        
+        .gallery-student-thanks-wrapper {
+
+            .gallery-student-thanks-list {
+                width: 25%;
+            }
+        }
+    
+        .grid {
+            height: auto;
+            grid-template-columns: auto auto;
+    
+            column-gap: 10px;
+            row-gap: 10px;
+                
+            .grid-image {
+                border-radius: 15px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+@media (max-device-width: $breakpoint-phone) {
+    #gallery-main-section-wrapper {
+    
+        .gallery-student-thanks-wrapper {
+    
+            .gallery-student-thanks-list {
+                width: 50%;
+                padding-left: 21px;
+
+                margin-bottom: 15px;
+            }
+        }  
+    }
+}

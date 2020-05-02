@@ -641,3 +641,41 @@ footer {
       margin-bottom: 20px; }
     #help-first-section-wrapper .container .col-4 #help-donate-to-hupenya-button {
       margin-top: 20px; }
+
+#gallery-hero-section .hero-section-image {
+  background-image: url(/Images/Lion-Looking-Up-Tree.jpeg); }
+
+#gallery-main-section-wrapper {
+  height: auto; }
+  #gallery-main-section-wrapper .section-intro-text {
+    margin-bottom: 3.0vh; }
+  #gallery-main-section-wrapper .gallery-student-thanks-wrapper {
+    display: flex;
+    width: 100%;
+    margin-bottom: 4vh; }
+    #gallery-main-section-wrapper .gallery-student-thanks-wrapper .gallery-student-thanks-list {
+      width: 10vw;
+      padding-left: 30px; }
+  #gallery-main-section-wrapper .grid {
+    column-gap: 10px;
+    row-gap: 10px; }
+    #gallery-main-section-wrapper .grid .grid-image {
+      border-radius: 15px; }
+
+@media (max-device-width: 1024px) {
+  #gallery-main-section-wrapper .gallery-student-thanks-wrapper .gallery-student-thanks-list {
+    width: 25%; }
+  #gallery-main-section-wrapper .grid {
+    height: auto;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    row-gap: 10px; }
+    #gallery-main-section-wrapper .grid .grid-image {
+      border-radius: 15px;
+      height: 150px; } }
+
+@media (max-device-width: 414px) {
+  #gallery-main-section-wrapper .gallery-student-thanks-wrapper .gallery-student-thanks-list {
+    width: 50%;
+    padding-left: 21px;
+    margin-bottom: 15px; } }

@@ -35,7 +35,3 @@ an unordered list containing the names of student contributers.
 
 css and sass ----------------
 The sass and compiled css files for styling the site! 
-
-Other Notes:
-I'm still working on this, and messed up something on the mobile index.html
-formating recently! I will be changing it after submitting.
